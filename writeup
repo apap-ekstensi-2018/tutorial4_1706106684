@@ -1,0 +1,19 @@
+Hal yang dipelajari pada tutorial ini:
+- Membuat method update dan delete
+- Mengaplikasikan POST request
+
+Jawaban pertanyaan 1:
+Validasi tetap diperlukan di sisi backend. Cara melakukan validasi adalah dengan cara mengecek dari setiap property yang dimiliki dari object Student.
+if (student.getNpm().isEmpty() || student.getName().isEmpty()) {
+	return "failed-update";
+}
+
+Jawaban pertanyaan 2:
+Karena method POST lebih aman dibanding GET.
+Ada penanganan yang berbeda di header controller
+Header :
+@PostMapping("/student/update/submit") --> diganti ke PostMapping
+public String updateSubmit (@ModelAttribute StudentModel student) --> Parameter menjadi ModelAttribute
+
+Jawaban pertanyaan 3:
+Tidak mungkin
